@@ -91,9 +91,4 @@ body {
     right: 1.5rem;
     padding: 0.8rem 1.6rem;
   }
-
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
 }
