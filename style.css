@@ -13,29 +13,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   margin: 0;
+  padding: 2rem;
 }
 
 .container {
   display: flex;
-  width: 100vh;
+  width: 100%;
+  max-width: 120rem;
+  height: 80vh;
 }
 
 .panel {
-  background-size: cover 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 100%;
   border-radius: 5rem;
   color: #fff;
   cursor: pointer;
   flex: 0.5;
   margin: 1rem;
   position: relative;
-  transition: flex 0.7s ease-in;
-  /* filter: grayscale(100%); */
+  transition: flex 0.7s ease-in-out;
 }
 
 .panel h3 {
@@ -49,6 +50,7 @@ body {
   right: 2rem;
   margin: 0;
   opacity: 0;
+  /* white-space: nowrap; */
 }
 
 .panel.active {
@@ -59,10 +61,35 @@ body {
   opacity: 1;
   transition: opacity 0.7s ease-in 0.3s;
 }
-
+/* --- MOBILE RESPONSIVE TWEAKS --- */
 @media (max-width: 480px) {
+  .body {
+    overflow-y: auto;
+  }
+
   .container {
-    width: 100vw;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .panel {
+    height: 15vh;
+    min-height: 100px;
+    margin: 0.8rem 0;
+    transition: height 0.5s ease-in;
+  }
+
+  .panel.active {
+    height: 60vh;
+    flex: none;
+  }
+
+  .panel h3 {
+    font-size: 2.4rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.8rem 1.6rem;
   }
 
   .panel:nth-of-type(4),
