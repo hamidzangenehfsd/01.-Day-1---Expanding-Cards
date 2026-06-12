@@ -86,10 +86,10 @@ body {
   }
 
   .panel h3 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     bottom: 1.5rem;
     right: 1.5rem;
-    padding: 0.8rem 0.8rem;
+    padding: 0.8rem 1.6rem;
   }
 
   .panel:nth-of-type(4),
